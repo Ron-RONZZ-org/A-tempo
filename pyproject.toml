@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "A-tempo"
+version = "0.1.0"
+description = "A tempo command - print current local time and day of week"
+authors = ["Rong ZHOU <rong.zhou6@etu.univ-lorraine.fr>"]
+readme = "README.md"
+license = "GPL-3.0-only"
+packages = [{ include = "A_tempo", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+A-core = { path = "../A-core" }
+
+[tool.poetry.plugins."A.commands"]
+tempo = "A_tempo.cli:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=8"
+typer = { version = ">=0.12", python = "<4.0" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
