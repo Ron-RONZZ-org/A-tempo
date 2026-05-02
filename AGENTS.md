@@ -45,6 +45,12 @@ src/A_tempo/
 poetry run pytest tests/
 ```
 
+All tests added (Issue #1):
+- 17 tests total (test_tempo.py)
+- Coverage: `_get_timezone()`, `_time_for_offset()`, `_day_name()`, CLI commands
+- Edge cases: UTC boundaries (-12, +14), invalid offsets, caching
+- Uses `typer.testing.CliRunner` for CLI tests
+
 ## What to Avoid
 
 - Don't duplicate A-core utilities

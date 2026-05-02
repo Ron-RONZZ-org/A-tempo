@@ -33,6 +33,18 @@ A tempo -z       # Show all UTC offsets
 A tempo --horzono 9  # Show time for UTC+9
 ```
 
+## Testing
+
+```bash
+# Setup
+uv venv .venv && uv pip install pytest typer rich --python .venv/bin/python
+
+# Run tests
+PYTHONPATH=../A-core/src:src .venv/bin/python -m pytest tests/ -v
+```
+
+Current test coverage: 17 tests (CLI, service logic, edge cases).
+
 ## About
 
 A-tempo is a plugin for the [A](https://github.com/Ron-RONZZ-org/A-core/) framework.
