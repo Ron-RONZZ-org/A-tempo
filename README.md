@@ -1,5 +1,9 @@
 # A-tempo
 
+## Context
+
+For architecture and API reference, see [A-workspace](./workspace/).
+
 A-tempo - Print current local time and day of week
 
 ## Install
