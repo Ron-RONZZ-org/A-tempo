@@ -1,3 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "A-tempo"
+version = "0.1.0"
+description = "A tempo command - print current local time and day of week"
+readme = "README.md"
+license = "GPL-3.0-only"
+authors = [{name = "Rong ZHOU", email = "rong.zhou6@etu.univ-lorraine.fr"}]
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-mock>=3.14.0",
+]
+
+[project.entry-points."A.commands"]
+tempo = "A_tempo.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/A_tempo"]
+
+# Poetry kept for local path dependency
 [tool.poetry]
 name = "A-tempo"
 version = "0.1.0"
@@ -13,10 +39,6 @@ A-core = { path = "../A-core" }
 
 [tool.poetry.plugins."A.commands"]
 tempo = "A_tempo.cli:app"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.group.dev.dependencies]
 pytest = ">=8"
