@@ -56,3 +56,6 @@ All tests added (Issue #1):
 - Don't duplicate A-core utilities
 - Don't skip i18n (use `tr()`)
 - Don't use `print()` — use `A.utils.output`
+## Branch Convention
+
+All A-* repos use `main` as the primary branch. Use `main` for all development.

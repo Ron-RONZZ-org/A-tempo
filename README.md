@@ -60,3 +60,6 @@ See the [A-core documentation](https://github.com/Ron-RONZZ-org/A-core/) for mor
 ## License
 
 GPL-3.0-only
+---
+
+**Branch:** Use `main` for all development.
