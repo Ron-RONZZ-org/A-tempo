@@ -12,6 +12,7 @@ A-tempo is a CLI plugin that shows the current local time.
 - `A` package for i18n (`tr()`), output (`error()`, `info()`), and subprocess (`run()`)
 - Plugin discovery via entry points
 - SQLite utilities when needed
+- **API Reference**: See [A-core AGENTS.md](https://github.com/Ron-RONZZ-org/A-core/blob/main/AGENTS.md#api-reference)
 
 All source code must import from `A`, not duplicate utilities.
 
