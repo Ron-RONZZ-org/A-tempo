@@ -14,10 +14,11 @@ from typing import Optional
 import typer
 
 from A.utils import info
+from A.core.i18n import tr_multi
 
 app = typer.Typer(
     name="tempo",
-    help="Print current local time and day of week",
+    help=tr_multi("Presi aktualan lokan tempon kaj semajntagon", "Print current local time and day of week", "Imprimer l'heure locale actuelle et le jour de la semaine"),
     invoke_without_command=True,
     context_settings={"help_option_names": ["-h", "--help"]},
 )
@@ -68,13 +69,13 @@ def tempo(
         None,
         "-z",
         "--horzono",
-        help="UTC timezone offset (-12 to +14)",
+        help=tr_multi("UTC horzona offset (-12 al +14)", "UTC timezone offset (-12 to +14)", "Décalage fuseau horaire UTC (-12 à +14)"),
     ),
     chiuj: bool = typer.Option(
         False,
         "-a",
         "--chiuj-horzonoj",
-        help="Show all UTC offsets (-12 to +14)",
+        help=tr_multi("Montri ĉiujn UTC-offsetojn (-12 al +14)", "Show all UTC offsets (-12 to +14)", "Afficher tous les décalages UTC (-12 à +14)"),
     ),
 ) -> None:
     """Print current local time (ISO 8601) and day of week."""
