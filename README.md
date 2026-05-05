@@ -20,6 +20,10 @@ A-tempo - Print current local time and day of week
 ## Install
 
 ```bash
+# Recommended — fast, reliable
+pip install uv && uv pip install A-tempo
+
+# Traditional
 pip install A-tempo
 ```
 
